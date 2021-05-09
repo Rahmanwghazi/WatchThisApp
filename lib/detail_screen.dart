@@ -71,12 +71,19 @@ class DetailScreen extends StatelessWidget{
               ),
             ),
             Container(
-              margin: EdgeInsets.all(20.0),
+              height: 70.0,
+              margin: EdgeInsets.only(top: 20.0, bottom: 20.0, left: 10.0, right: 10.0),
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                color: Colors.grey[300],
+                borderRadius: BorderRadius.all(Radius.circular(10.0))
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
                     children:[
+                      SizedBox(height: 8.0),
                       Icon(
                         Icons.star,
                         color: Colors.yellow[700],
@@ -87,16 +94,18 @@ class DetailScreen extends StatelessWidget{
                   ),
                   Column(
                     children:[
+                      SizedBox(height: 8.0),
                       Icon(
                         Icons.arrow_circle_up_rounded,
                         color: Colors.green,
                       ),
                       SizedBox(height: 8.0),
-                      Text(review.popularity)
+                      Text(review.popularity),
                     ]
                   ),
                   Column(
                     children:[
+                      SizedBox(height: 8.0),
                       Icon(
                         Icons.language,
                         color: Colors.black,

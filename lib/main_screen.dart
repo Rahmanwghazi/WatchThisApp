@@ -55,11 +55,9 @@ class MainScreen extends StatelessWidget {
                      Text(review.title, 
                      style: TextStyle(
                        fontWeight:FontWeight.bold,
-                       fontSize: 15)
+                       fontSize: 20)
                      ),
-                     Text(review.year
-                       
-                     )
+                     Text(review.year)
                    ]
                  )
                )
