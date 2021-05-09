@@ -14,17 +14,50 @@ class DetailScreen extends StatelessWidget{
           child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Image.asset(review.imageAsset),
-            Container(
-              margin: EdgeInsets.only(top: 16.0),
-              child: Text(
-                review.title, 
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
-                ),),
+            Stack(
+              children: <Widget>[
+                Image.asset(review.imageAsset),
+                SafeArea(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.grey,
+                          child: IconButton(
+                            icon: Icon(
+                              Icons.arrow_back,
+                              color: Colors.white,
+                            ),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ),
+                        WhiteListButton(),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
+           Container(
+             margin: EdgeInsets.all(10.0),
+             child: Column(
+               children:[
+                 Text(
+                    review.title, 
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+               ] 
+             ),
+
+           ),
             Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -113,6 +146,29 @@ class DetailScreen extends StatelessWidget{
          ),
        )
       )
+    );
+  }
+}
+
+class WhiteListButton extends StatefulWidget{
+  @override
+  _WhiteListButtonState createState() => _WhiteListButtonState();
+}
+
+class _WhiteListButtonState extends State <WhiteListButton>{
+  bool isWhiteList = false;
+  @override 
+  Widget build(BuildContext context){
+    return IconButton(
+      icon: Icon(
+        isWhiteList ? Icons.fact_check_rounded : Icons.fact_check_outlined,
+        color: Colors.white,
+      ),
+      onPressed: (){
+        setState((){
+          isWhiteList = !isWhiteList;
+        });
+      },
     );
   }
 }

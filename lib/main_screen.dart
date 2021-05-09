@@ -26,28 +26,25 @@ class MainScreen extends StatelessWidget {
         ],
       ),
       body: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        
+        scrollDirection: Axis.vertical,
         itemBuilder: (context, index) {
           final ReviewSeries review = reviewSeriesList[index];
-         
           return InkWell(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return DetailScreen(review: review);
               }));
-            },
-          
+            }, 
            child: Column(
              children: [
                Container(
-                 height:350,
+                 height:450,
                  child:  Card(
                     semanticContainer: true,
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: Image.asset(review.imageAsset, fit: BoxFit.fill),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-                    elevation: 5,
+                    elevation: 10,
                     margin: EdgeInsets.only(left: 10, top: 20),
                 ),
                ),
@@ -59,6 +56,9 @@ class MainScreen extends StatelessWidget {
                      style: TextStyle(
                        fontWeight:FontWeight.bold,
                        fontSize: 15)
+                     ),
+                     Text(review.year
+                       
                      )
                    ]
                  )
