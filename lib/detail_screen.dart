@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:watch_this/model/reviews.dart';
 
 class DetailScreen extends StatelessWidget{
+  final ReviewSeries review;
+
+  DetailScreen({@required this.review});
+
   @override 
   Widget build(BuildContext context){
     return Scaffold(
@@ -9,11 +14,11 @@ class DetailScreen extends StatelessWidget{
           child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Image.asset('images/GFN2.jpg'),
+            Image.asset(review.imageAsset),
             Container(
               margin: EdgeInsets.only(top: 16.0),
               child: Text(
-                'Girl From Nowhere', 
+                review.title, 
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 30.0,
@@ -24,11 +29,11 @@ class DetailScreen extends StatelessWidget{
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('2021'),
+                  Text(review.year),
                   Text(' • '),
-                  Text('Mystery, Thriller'),
+                  Text(review.genre),
                   Text(' • '),
-                  Text('8 Episodes')
+                  Text(review.episodes)
                 ]
               ),
             ),
@@ -44,7 +49,7 @@ class DetailScreen extends StatelessWidget{
                         color: Colors.yellow[700],
                       ),
                       SizedBox(height: 8.0),
-                      Text('8.0/10')
+                      Text(review.rating)
                     ]
                   ),
                   Column(
@@ -54,7 +59,7 @@ class DetailScreen extends StatelessWidget{
                         color: Colors.green,
                       ),
                       SizedBox(height: 8.0),
-                      Text('682')
+                      Text(review.popularity)
                     ]
                   ),
                   Column(
@@ -64,7 +69,7 @@ class DetailScreen extends StatelessWidget{
                         color: Colors.black,
                       ),
                       SizedBox(height: 8.0),
-                      Text('Thai')
+                      Text(review.language)
                     ]
                   )
                 ],
@@ -75,7 +80,7 @@ class DetailScreen extends StatelessWidget{
               child: Column(
                 children: [
                   Text('Synopsis:', textAlign:TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold),),
-                  Text( 'A mysterious, clever girl named Nanno transfers to different schools, exposing the lies and misdeeds of the students and faculty at every turn. This time, she returned to expose the lies and hypocrisy that occurred at the high school where he attended school. Not only that, Nanno also came to deal directly with the students who had been the source of problems at his school.', textAlign:TextAlign.center),
+                  Text( review.synopsis, textAlign:TextAlign.center),
                 ]
               ) 
             ),
@@ -84,7 +89,7 @@ class DetailScreen extends StatelessWidget{
               child: Column(
                 children: [
                   Text('Stars:', style: TextStyle(fontWeight: FontWeight.bold),),
-                  Text('Chicha Amatayakul, James Teeradon, Tai Penpak Sirikul, Paricia Tancanok, Nink', textAlign:TextAlign.center),
+                  Text(review.stars, textAlign:TextAlign.center),
                 ]
               ) 
             ),
@@ -92,29 +97,16 @@ class DetailScreen extends StatelessWidget{
               height: 150,
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(7.0),
+                children: review.imageUrls.map((url) {
+                  return Padding(
+                    padding: const EdgeInsets.all(4.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child:  Image.network('https://i.ytimg.com/vi/VjqKNRlDcpA/maxresdefault.jpg'),
-                    )
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(7.0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.network('http://images.summitmedia-digital.com/cosmo/images/2021/04/19/girl-from-nowhere-season-2-1618803870.jpg'),
-                    )                  
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(7.0),
-                    child:  ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child:Image.network('https://akcdn.detik.net.id/visual/2021/04/19/serial-girl-from-nowhere-2-2_169.jpeg?w=650'),
-                    )
-                  )
-                ]
+                      child: Image.network(url),
+                    ),
+                  );
+                }).toList(),
+                
               )
             )
           ],
