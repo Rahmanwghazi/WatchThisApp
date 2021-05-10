@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:watch_this/main_screen.dart';
 
-
-
 class SplashScreen extends StatefulWidget{
   _SplashScreen createState() => _SplashScreen();
 }
@@ -46,7 +44,6 @@ class _SplashScreen extends State<SplashScreen>{
                  fontFamily: 'Anton',
               ),
             ),
-            
           ],
         ),
       ),

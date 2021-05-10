@@ -16,7 +16,7 @@ class MainScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
              fontFamily: 'Anton',
             fontSize: 30,
-            )),
+          )),
         backgroundColor: Colors.white,
         elevation: 0,
       ),
@@ -31,7 +31,7 @@ class MainScreen extends StatelessWidget {
           }
         },
       )
-       );
+   );
   }
 }
 
@@ -79,9 +79,7 @@ class ReviewSeriesList  extends StatelessWidget{
           );
         },
         itemCount: reviewSeriesList.length,
-
     );
-
   }
 }
 
@@ -127,9 +125,7 @@ class ReviewSeriesGrid extends StatelessWidget {
                      ),
                      Text(review.year)
                    ]
-                 ) ,
-                 
-                 
+                 ) ,                 
                ),
              ],
            ),
