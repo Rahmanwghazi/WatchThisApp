@@ -27,7 +27,7 @@ class _SplashScreen extends State<SplashScreen>{
   @override 
   Widget build(BuildContext context){
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -40,9 +40,10 @@ class _SplashScreen extends State<SplashScreen>{
             SizedBox(height: 24.0,),
             Text("WatchThis",
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
                 fontSize: 20.0,
+                 fontFamily: 'Anton',
               ),
             ),
             

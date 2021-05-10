@@ -10,21 +10,15 @@ class MainScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'WatchThis Size: ${MediaQuery.of(context).size.width}',
+          'WatchThis',
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
+             fontFamily: 'Anton',
             fontSize: 30,
             )),
         backgroundColor: Colors.white,
         elevation: 0,
-        actions: [
-          Padding(padding: EdgeInsets.only(right:15),
-          child: Icon(
-            Icons.search,
-            color: Colors.black,
-          ),)
-        ],
       ),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints){

@@ -43,7 +43,8 @@ var reviewSeriesList = [
     imageUrls: [
       'https://i.ytimg.com/vi/VjqKNRlDcpA/maxresdefault.jpg',
       'http://images.summitmedia-digital.com/cosmo/images/2021/04/19/girl-from-nowhere-season-2-1618803870.jpg',
-      'https://akcdn.detik.net.id/visual/2021/04/19/serial-girl-from-nowhere-2-2_169.jpeg?w=650'
+      'https://akcdn.detik.net.id/visual/2021/04/19/serial-girl-from-nowhere-2-2_169.jpeg?w=650',
+      'https://i2.wp.com/readysteadycut.com/wp-content/uploads/2021/05/AAAABeYJE8pAvHz6NP37uuiDZjPqhg8Z6afm4b5a2rcwsiMMLBPeCWOBPCTk1PzOEL7baCnh9-hCxoukcI6KPy6tJS4gQsT5.jpg?fit=1200%2C675&ssl=1&resize=350%2C200'
     ]
   ),
   ReviewSeries(
@@ -58,6 +59,8 @@ var reviewSeriesList = [
     stars: 'Sophia Lillis, Wyatt Oleff, Sofia Bryant',
     imageAsset: 'images/IMNO.jpg',
     imageUrls: [
+      'https://m.media-amazon.com/images/M/MV5BZTYxYjNiOTItNzM3NC00NWNiLWE2NDgtYTYxZmZiMjBiMWRhXkEyXkFqcGdeQXVyNjYyNDMwOQ@@._V1_.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa6tOUI79FC7P0REvTdtvh3tz3IeYZsAlzHc7bOY1Y8MQCWsaYm-nl2T0nO8x95nDJefU&usqp=CAU',
       'https://m.media-amazon.com/images/M/MV5BMTQyMTE1MDctMjE1Ny00ODgxLTk1ZDMtMTc3YWRlMjZkMjFlXkEyXkFqcGdeQXVyNjYyNDMwOQ@@._V1_.jpg',
       'https://cdn.images.express.co.uk/img/dynamic/20/590x/secondary/I-Am-Not-Okay-With-This-filming-Pittsburgh-2330163.jpg?r=1583163464022',
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk5zNWf1EUK39i5yFtzGYzVV2Qx-y20_NhmhaWR4hjffjABsVa6Ndqs1FOYajMMK1JyaY&usqp=CAU'
@@ -75,6 +78,9 @@ var reviewSeriesList = [
     stars: 'Esther Acebo, Pedro Alonso, Alberto Amarilla ',
     imageAsset: 'images/MH.jpg',
     imageUrls: [
+      'https://m.media-amazon.com/images/M/MV5BMzAxMGQ4NmItMWQ0Yi00NTY3LTlhZjctNWQzZmM3ZGY2OWI0XkEyXkFqcGdeQXVyMTExMDU0MzUy._V1_.jpg',
+      'https://lh3.googleusercontent.com/6huhGgkrWGUfnrDDFLIKxXdKXTY3uq5lIo--DpqZsoM8gHew87uGEe7JBtw8_4Evmw',
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/money-heist-la-casa-de-papel-s01-ep01-0031-1575907043.jpg?resize=480:*',
       'https://pict-a.sindonews.net/dyn/620/gensindo/content/2020/04/08/1/2428/sukses-besar-kapan-money-heist-season-5-bisa-kita-tonton-images-tra.jpg',
       'https://gambar.sgp1.digitaloceanspaces.com/wp-content/uploads/2020/08/money-heist-season-5-759.jpg',
       'https://mmc.tirto.id/image/otf/500x0/2020/03/13/money-heist_ratio-16x9.jpg'
@@ -93,6 +99,7 @@ var reviewSeriesList = [
     imageAsset: 'images/RW.jpg',
     imageUrls: [
       'https://akcdn.detik.net.id/visual/2020/06/01/c2ac5bee-6734-4f5e-9d88-e8e72d6b7bd2_169.png?w=650',
+      'https://tvline.com/wp-content/uploads/2020/06/13-reasons-why-season-4.jpg?w=620',
       'https://mmc.tirto.id/image/otf/500x0/2017/04/24/13rw_102_03419rc_ratio-16x9.jpg',
       'https://images2.minutemediacdn.com/image/fetch/w_736,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Ffansided.com%2Ffiles%2F2020%2F06%2F13RW_401_Unit_03262R-850x560.jpg'
     ]
@@ -110,6 +117,8 @@ var reviewSeriesList = [
     imageAsset: 'images/SB.jpg',
     imageUrls: [
       'https://i.insider.com/6083652a5f6110001827101c?width=1200&format=jpeg',
+      'https://pyxis.nymag.com/v1/imgs/156/f15/679dbbdfbbc16dc5771fefdbc9b285fb05-shadow-and-bone.jpg',
+      'https://akcdn.detik.net.id/visual/2021/04/21/serial-shadow-and-bone-2_169.jpeg?w=650',
       'https://metro.co.uk/wp-content/uploads/2021/01/PRC_180653847.jpg?quality=90&strip=all',
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQeu2W6m26kWXSqBNaj7jpq68aacl6hgAkcgcYrPtN-TBXjP3S7XtLQAGDzgOZIIkmsBY&usqp=CAU'
     ]
@@ -128,6 +137,8 @@ var reviewSeriesList = [
     imageUrls: [
       'https://m.media-amazon.com/images/M/MV5BYmE5MDczY2EtNmRhZi00ZTBhLTliODktYzY3YzM0MTIxYzVkXkEyXkFqcGdeQWFsZWxvZw@@._V1_UX477_CR0,0,477,268_AL_.jpg',
       'https://i.ytimg.com/vi/2XeM7A0vGQo/maxresdefault.jpg', 
+      'https://i0.wp.com/entbiznews.com/wp-content/uploads/2019/10/stranger-things-season-4-questions-1024x512.jpg?fit=1024%2C512&ssl=1',
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ee3168c2-0d5e-4484-9e1c-47425f942ebe-1734-000002d2ec62a619-1509390783.jpeg?crop=1xw:1xh;center,top&resize=480:*',
       'https://mmc.tirto.id/image/otf/880x495/2019/07/10/film-stranger-things-2016-imdb--3_ratio-16x9.jpg'
     ]
   ),
@@ -144,6 +155,9 @@ var reviewSeriesList = [
     imageAsset: 'images/TGG2.jpg',
     imageUrls: [
       'https://i.ytimg.com/vi/QsKVp2VTmgY/maxresdefault.jpg',
+      'https://m.media-amazon.com/images/M/MV5BNjYyZTE5Y2EtNjk1Yy00OWViLTljYmMtMzBlOWU5NThlMDBkXkEyXkFqcGdeQXVyMTA2NTM0NzM5._V1_.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZCZHCnYDL_Hd6aQbXFbz60IU8FuJOOKzde4yLv-nYTRLVtdI5IsLqFg5V8WOJOIp6PLY&usqp=CAU',
+      'https://i.ytimg.com/vi/wgZy85dNocQ/maxresdefault.jpg',
       'https://m.media-amazon.com/images/M/MV5BYzc5NTViOTItNGMyNy00ZmJlLTg1ZmYtNGIxNjI2NDEzYjcxXkEyXkFqcGdeQXVyMTA2NTM0NzM5._V1_.jpg',
       'https://m.media-amazon.com/images/M/MV5BZjYzMmZmOTQtNTM4OC00NzU4LWIwYjctNTMxMmViNWU3OGJjXkEyXkFqcGdeQXVyMTA2NTM0NzM5._V1_.jpg',
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiCIyRv2tgKPC0ZpN-pHIyvjehh4SjrJRe-fS8MuTi-SwgoTJSXQ1-CHGSWDLA5-iV5RA&usqp=CAU',
