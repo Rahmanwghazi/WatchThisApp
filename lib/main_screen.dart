@@ -8,8 +8,9 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
-          'WatchThis', 
+          'WatchThis Size: ${MediaQuery.of(context).size.width}',
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
@@ -25,8 +26,26 @@ class MainScreen extends StatelessWidget {
           ),)
         ],
       ),
-      body: ListView.builder(
-        scrollDirection: Axis.vertical,
+      body: LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraints){
+          if(constraints.maxWidth <= 700){
+            return ReviewSeriesList();
+          }else if (constraints.maxWidth <= 1200){
+            return ReviewSeriesGrid(gridCount: 2);
+          }else{
+            return ReviewSeriesGrid(gridCount: 4);
+          }
+        },
+      )
+       );
+  }
+}
+
+class ReviewSeriesList  extends StatelessWidget{
+  @override 
+  Widget build(BuildContext context){
+    return ListView.builder(
+      scrollDirection: Axis.vertical,
         itemBuilder: (context, index) {
           final ReviewSeries review = reviewSeriesList[index];
           return InkWell(
@@ -66,7 +85,66 @@ class MainScreen extends StatelessWidget {
           );
         },
         itemCount: reviewSeriesList.length,
+
+    );
+
+  }
+}
+
+class ReviewSeriesGrid extends StatelessWidget {
+  final int gridCount;
+ 
+  ReviewSeriesGrid({@required this.gridCount});
+ 
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 1.0),
+      child: GridView.count(
+        crossAxisCount: gridCount,
+        children: reviewSeriesList.map((review) {
+          return InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return DetailScreen(review: review);
+              }));
+            }, 
+           child: SingleChildScrollView(
+             child:  Column(
+             children: [
+               Container(
+                 height:400,
+                 child:  Card(
+                    semanticContainer: true,
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    child: Image.asset(review.imageAsset, fit: BoxFit.fill),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+                    elevation: 10,
+                ),
+               ),
+               Container(
+                 child:  Column(
+                   children: [
+                     SizedBox(height:8.0),
+                     Text(review.title, 
+                     style: TextStyle(
+                       fontWeight:FontWeight.bold,
+                       fontSize: 20)
+                     ),
+                     Text(review.year)
+                   ]
+                 ) ,
+                 
+                 
+               ),
+             ],
+           ),
+           )
+          );
+        }).toList(),
       ),
     );
   }
 }
+
+   
